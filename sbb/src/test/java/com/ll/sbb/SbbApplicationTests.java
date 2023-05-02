@@ -1,13 +1,16 @@
 package com.ll.sbb;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
-@SpringBootTest
+
+@Controller
 class SbbApplicationTests {
+    @ResponseBody
+    @GetMapping("/name")
+    public String index() {
 
-	@Test
-	void contextLoads() {
-	}
-
+        return "박창규";
+    }
 }
